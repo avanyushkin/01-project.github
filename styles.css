@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    margin: 0;
+    background: #111;
+    height: 100vh; /*заниваем 100% пространства*/
+    display: flex;
+    justify-content: center; /*выравниваем по центру*/
+    align-items: center;
+}
+
+.container { /*корневой класс*/
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+}
+
+.image {
+    height: 80vh;
+    border-radius: 20px; /*ракругляем*/
+    margin: 10px;
+    cursor: pointer; /*для работы при наведении на картинку*/
+    color: white;
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; /*чтобы каждый заголовой позиционировался относительно каэдого слайда*/
+    transition: all 500ms ease-in-out; /*свойста анимации*/
+}
+
+.image h3 {
+    position: absolute;
+    font-size: 24px;
+    bottom: 20px;
+    left: 20px; /*отступ слева*/
+    margin: 0; /*убираем дефолтные отступы*/
+    opacity: 0; /*делаем надпись невидимой, если она не активна*/
+}
+
+.image.active { /*свойства активного слайда*/
+    flex: 10; /*если активный - то в 10 раз больше*/
+}
+
+.image.active h3 {
+    opacity: 1;
+}
