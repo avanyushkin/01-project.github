@@ -3,7 +3,7 @@ const images = document.querySelectorAll('.image'); /*получаем кажд�
 images[0].classList.add('active');
 
 for (const image of images) {
-    image.addEventListener('click', () => {
+    image.addEventListener('mouseover', () => {
         /*при клике нужно удалять класс active у всех слайдов кроме текущего*/
         clearActiveClasses();
         /*при клике нужно добавить класс active*/
